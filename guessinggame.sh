@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 function playgame {
-	local files guess stat
-	files=$(ls -1 | wc -l)		# Number of files in the directory
+	local files guess
+	files=$(find . -depth 1 | wc -l)			# Number of Unix files in the directory
+	# files=$(find . -depth 1 -type f| wc -l)	# Number of regular files
 
 	while true
 	do
@@ -23,7 +24,7 @@ function playgame {
 				break
 			fi
 		else
-			echo "Invalid input. Only numeric inputs are accepted. Please try again."
+			echo "Invalid input. Only positive numeric values are accepted. Please try again."
 		fi
 	done
 }

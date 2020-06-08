@@ -7,5 +7,5 @@ README:
 	echo "" >> README.md
 	echo "**Number of lines in guessinggame.sh**: $$(wc -l < guessinggame.sh)">> README.md
 
-clear:
+clean:
 	rm README.md
